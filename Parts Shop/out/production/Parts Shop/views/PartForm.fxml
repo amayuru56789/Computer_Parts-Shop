@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="PartFormContext" prefHeight="539.0" prefWidth="936.0" style="-fx-background-color: #43609C;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.PartFormController">
+   <children>
+      <VBox prefHeight="539.0" prefWidth="243.0" style="-fx-background-color: #A4A4A4;">
+         <children>
+            <VBox prefHeight="88.0" prefWidth="243.0" style="-fx-background-color: #43609C;">
+               <children>
+                  <Pane prefHeight="86.0" prefWidth="243.0">
+                     <children>
+                        <Label layoutX="52.0" layoutY="5.0" prefHeight="29.0" prefWidth="124.0" text="AVC" textFill="#f2eeee">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                        </Label>
+                        <Separator layoutX="52.0" layoutY="33.0" prefHeight="5.0" prefWidth="124.0" />
+                     </children>
+                  </Pane>
+               </children>
+            </VBox>
+            <Pane prefHeight="278.0" prefWidth="243.0" style="-fx-background-color: #43609C;">
+               <children>
+                  <Label fx:id="lblTime" alignment="CENTER" layoutX="37.0" layoutY="25.0" prefHeight="40.0" prefWidth="159.0" text="Time" textFill="#f2eeee">
+                     <font>
+                        <Font name="System Bold" size="28.0" />
+                     </font>
+                  </Label>
+                  <Separator layoutX="37.0" layoutY="72.0" prefHeight="5.0" prefWidth="194.0" />
+                  <Label fx:id="lblDate" alignment="CENTER" layoutX="42.0" layoutY="99.0" prefHeight="40.0" prefWidth="159.0" text="Date" textFill="#f2eeee">
+                     <font>
+                        <Font name="System Bold" size="28.0" />
+                     </font>
+                  </Label>
+                  <JFXButton buttonType="RAISED" layoutX="2.0" layoutY="186.0" onAction="#backToHome" prefHeight="40.0" prefWidth="243.0" style="-fx-background-radius: 20; -fx-border-color: white; -fx-border-radius: 20;" text="Back" textFill="#fff9f9" />
+               </children>
+            </Pane>
+            <Pane prefHeight="200.0" prefWidth="200.0">
+               <children>
+                  <ImageView fitHeight="96.0" fitWidth="128.0" layoutX="77.0" layoutY="10.0" onMouseEntered="#playMouseEnterAnimation" onMouseExited="#playMouseExitAnimation" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../assets/printer_14721.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </Pane>
+         </children>
+      </VBox>
+      <AnchorPane layoutX="243.0" layoutY="88.0" prefHeight="451.0" prefWidth="774.0" style="-fx-background-color: #A4A4A4;">
+         <children>
+            <TableView fx:id="tblPart" layoutX="11.0" layoutY="118.0" prefHeight="269.0" prefWidth="755.0">
+               <columns>
+                  <TableColumn fx:id="colCode" prefWidth="111.0" text="Part Code" />
+                  <TableColumn fx:id="colBrand" prefWidth="132.0" text="Brand" />
+                  <TableColumn fx:id="colDesc" prefWidth="154.0" text="Description" />
+                  <TableColumn fx:id="colPrice" prefWidth="127.0" text="Unit Price" />
+                  <TableColumn fx:id="colQtyOnHand" prefWidth="102.0" text="QtyOnHand" />
+                  <TableColumn fx:id="colCatergory" prefWidth="144.0" text="Catergory" />
+               </columns>
+            </TableView>
+            <JFXButton buttonType="RAISED" layoutX="77.0" layoutY="400.0" onAction="#savePartOnAction" prefHeight="32.0" prefWidth="108.0" style="-fx-background-radius: 50000; -fx-background-color: #1565c0; -fx-border-color: #e3f2fd; -fx-border-radius: 50000;" text="Save Part" textFill="#f8f5f5">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </JFXButton>
+            <JFXButton buttonType="RAISED" layoutX="440.0" layoutY="400.0" onAction="#updatePartOnAction" prefHeight="32.0" prefWidth="124.0" style="-fx-background-radius: 50000; -fx-background-color: #757575; -fx-border-color: #f5f5f5; -fx-border-radius: 50000;" text="Update Part" textFill="#f5f0f0">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </JFXButton>
+            <JFXButton buttonType="RAISED" layoutX="596.0" layoutY="400.0" onAction="#removePartOnAction" prefHeight="32.0" prefWidth="124.0" style="-fx-background-radius: 50000; -fx-background-color: #d50000; -fx-border-color: #ffebee; -fx-border-radius: 50000;" text="Remove Part" textFill="#f2ecec">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </JFXButton>
+            <JFXTextField fx:id="txtPartCode" focusColor="WHITE" labelFloat="true" layoutX="29.0" layoutY="19.0" onAction="#searchPartOnAction" prefHeight="25.0" prefWidth="135.0" promptText="Part Code" unFocusColor="WHITE">
+               <font>
+                  <Font name="Arial Black" size="12.0" />
+               </font>
+            </JFXTextField>
+            <JFXTextField fx:id="txtBrand" focusColor="WHITE" labelFloat="true" layoutX="195.0" layoutY="19.0" prefHeight="25.0" prefWidth="167.0" promptText="Brand" unFocusColor="WHITE">
+               <font>
+                  <Font name="Arial Black" size="12.0" />
+               </font>
+            </JFXTextField>
+            <JFXTextField fx:id="txtDescription" focusColor="WHITE" labelFloat="true" layoutX="387.0" layoutY="19.0" prefHeight="25.0" prefWidth="176.0" promptText="Description" unFocusColor="WHITE">
+               <font>
+                  <Font name="Arial Black" size="12.0" />
+               </font>
+            </JFXTextField>
+            <JFXTextField fx:id="txtPrice" focusColor="WHITE" labelFloat="true" layoutX="587.0" layoutY="19.0" prefHeight="25.0" prefWidth="167.0" promptText="Unit Price" unFocusColor="WHITE">
+               <font>
+                  <Font name="Arial Black" size="12.0" />
+               </font>
+            </JFXTextField>
+            <JFXTextField fx:id="txtQtyOnHand" focusColor="WHITE" labelFloat="true" layoutX="29.0" layoutY="66.0" prefHeight="25.0" prefWidth="167.0" promptText="QtyOnHand" unFocusColor="WHITE">
+               <font>
+                  <Font name="Arial Black" size="12.0" />
+               </font>
+            </JFXTextField>
+            <JFXTextField fx:id="txtCatergory" focusColor="WHITE" labelFloat="true" layoutX="224.0" layoutY="66.0" prefHeight="25.0" prefWidth="167.0" promptText="Catergory" unFocusColor="WHITE">
+               <font>
+                  <Font name="Arial Black" size="12.0" />
+               </font>
+            </JFXTextField>
+         </children>
+      </AnchorPane>
+      <Pane layoutX="244.0" layoutY="-2.0" prefHeight="88.0" prefWidth="508.0">
+         <children>
+            <Label layoutX="116.0" layoutY="30.0" prefHeight="28.0" prefWidth="152.0" text="Parts" textFill="#eee5e5">
+               <font>
+                  <Font name="Berlin Sans FB Demi Bold" size="20.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+      <JFXTextField fx:id="txtSearch" focusColor="WHITE" labelFloat="true" layoutX="796.0" layoutY="36.0" promptText="Search" unFocusColor="WHITE" />
+      <ImageView fitHeight="56.0" fitWidth="67.0" layoutX="946.0" layoutY="18.0" onMouseEntered="#playMouseEnterAnimation" onMouseExited="#playMouseExitAnimation" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../assets/search_14765.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>

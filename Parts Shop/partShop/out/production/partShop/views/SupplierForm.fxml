@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="supFormContext" prefHeight="533.0" prefWidth="1005.0" style="-fx-background-color: #43609C;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.SupplierFormController">
+   <children>
+      <VBox prefHeight="533.0" prefWidth="243.0" style="-fx-background-color: #A4A4A4;">
+         <children>
+            <VBox prefHeight="88.0" prefWidth="243.0" style="-fx-background-color: #43609C;" />
+            <Pane prefHeight="295.0" prefWidth="243.0" style="-fx-background-color: #43609C;">
+               <children>
+                  <JFXButton buttonType="RAISED" layoutX="1.0" layoutY="238.0" onAction="#backToHome" prefHeight="49.0" prefWidth="243.0" style="-fx-background-radius: 50000; -fx-background-color: #A4A4A4;" text="Back" textFill="WHITE" />
+                  <JFXButton buttonType="RAISED" layoutX="1.0" layoutY="6.0" onAction="#openViewEmpForm" prefHeight="49.0" prefWidth="243.0" style="-fx-background-radius: 50000; -fx-background-color: #A4A4A4;" text="View Employee Detail" textFill="WHITE" />
+               </children>
+            </Pane>
+            <Pane prefHeight="155.0" prefWidth="243.0">
+               <children>
+                  <ImageView fitHeight="81.0" fitWidth="85.0" layoutX="79.0" layoutY="7.0" onMouseEntered="#playMouseEnterAnimation" onMouseExited="#playMouseExitAnimation" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../assets/printer_14721.png" />
+                     </image>
+                  </ImageView>
+                  <Label layoutX="35.0" layoutY="111.0" text="Print your All the Supplier details" />
+               </children>
+            </Pane>
+         </children>
+      </VBox>
+      <AnchorPane layoutX="243.0" layoutY="88.0" prefHeight="445.0" prefWidth="774.0" style="-fx-background-color: white;">
+         <children>
+            <JFXTextField fx:id="txtSupId" focusColor="#43609c" labelFloat="true" layoutX="30.0" layoutY="125.0" onKeyPressed="#supId_KeyPressed" onKeyReleased="#textFields_Key_Released" promptText="Supplier ID" unFocusColor="#2b4d93">
+               <font>
+                  <Font name="Arial Black" size="12.0" />
+               </font>
+            </JFXTextField>
+            <JFXTextField fx:id="txtSupAddress" focusColor="#43609c" labelFloat="true" layoutX="212.0" layoutY="125.0" onKeyPressed="#supId_KeyPressed" onKeyReleased="#textFields_Key_Released" promptText="Supplier Address" unFocusColor="#2b4d93">
+               <font>
+                  <Font name="Arial Black" size="12.0" />
+               </font>
+            </JFXTextField>
+            <JFXTextField fx:id="txtSupName" focusColor="#43609c" labelFloat="true" layoutX="30.0" layoutY="190.0" onKeyPressed="#supId_KeyPressed" onKeyReleased="#textFields_Key_Released" prefHeight="25.0" prefWidth="295.0" promptText="Supplier Name" unFocusColor="#2b4d93">
+               <font>
+                  <Font name="Arial Black" size="12.0" />
+               </font>
+            </JFXTextField>
+            <JFXTextField fx:id="txtContact" focusColor="#43609c" labelFloat="true" layoutX="30.0" layoutY="255.0" onKeyPressed="#supId_KeyPressed" onKeyReleased="#textFields_Key_Released" promptText="Contact no" unFocusColor="#2b4d93">
+               <font>
+                  <Font name="Arial Black" size="12.0" />
+               </font>
+            </JFXTextField>
+            <JFXButton fx:id="btnSave" buttonType="RAISED" layoutX="102.0" layoutY="383.0" onAction="#saveSupplierOnAction" prefHeight="32.0" prefWidth="145.0" style="-fx-background-radius: 50000; -fx-background-color: #34495e; -fx-border-color: #ecf0f1; -fx-border-radius: 50000;" text="Save Customer" textFill="#eee7e7">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </JFXButton>
+            <JFXButton fx:id="btnUpdate" buttonType="RAISED" layoutX="440.0" layoutY="399.0" onAction="#updateSupplierOnAction" prefHeight="32.0" prefWidth="124.0" style="-fx-background-radius: 50000; -fx-background-color: #2c3e50; -fx-border-color: #ecf0f1; -fx-border-radius: 50000;" text="Update Customer" textFill="#f2e9e9">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </JFXButton>
+            <JFXButton fx:id="btnRemove" buttonType="RAISED" layoutX="596.0" layoutY="399.0" onAction="#removeSupplierOnAction" prefHeight="32.0" prefWidth="124.0" style="-fx-background-radius: 50000; -fx-background-color: #e74c3c; -fx-border-color: #ecf0f1; -fx-border-radius: 50000;" text="Remove Customer" textFill="#eeeaea">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </JFXButton>
+            <Label id="treat" layoutX="521.0" layoutY="280.0" stylesheets="@../../../../../Downloads/Parts%20Shop/partShop/src/assert/css/colour.css" text="Please Treat !" />
+            <Label id="t1" layoutX="428.0" layoutY="303.0" stylesheets="@../../../../../Downloads/Parts%20Shop/partShop/src/assert/css/colour.css" text="If you click the remove customer button,&#10; all the data of the relevant customer &#10;will be lost !!!&#10;and Click Update button &#10;You can save new data !" textAlignment="CENTER" />
+            <ImageView fitHeight="278.0" fitWidth="335.0" layoutX="418.0" opacity="0.65" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../assets/parts-computer-icon-21822784.jpg" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="90.0" fitWidth="90.0" layoutX="150.0" layoutY="48.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../assets/360_F_48238706_pPYRwuN0OpzXhBcmoNX9XeHchDiuC2Ps.jpg" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+      <Pane layoutX="243.0" prefHeight="88.0" prefWidth="508.0">
+         <children>
+            <Label layoutX="116.0" layoutY="30.0" prefHeight="28.0" prefWidth="152.0" text="Supplier Form" textFill="#f2eaea">
+               <font>
+                  <Font name="Agency FB Bold" size="20.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+      <Label layoutX="52.0" layoutY="5.0" prefHeight="29.0" prefWidth="124.0" text="AVC" />
+      <Separator layoutX="52.0" layoutY="33.0" prefHeight="5.0" prefWidth="124.0" />
+      <JFXTextField fx:id="txtSearch" focusColor="WHITE" labelFloat="true" layoutX="796.0" layoutY="36.0" onAction="#searchEmpOnAction" promptText="Search" unFocusColor="WHITE" />
+      <ImageView fitHeight="56.0" fitWidth="67.0" layoutX="945.0" layoutY="27.0" onMouseEntered="#playMouseEnterAnimation" onMouseExited="#playMouseExitAnimation" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../assets/search_14765.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>

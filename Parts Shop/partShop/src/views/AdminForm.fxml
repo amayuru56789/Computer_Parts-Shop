@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXPasswordField?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="440.0" prefWidth="661.0" style="-fx-background-color: #A4A4A4;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.AdminFormController">
+   <children>
+      <Pane fx:id="adminFormContext" prefHeight="440.0" prefWidth="661.0" style="-fx-background-color: white;">
+         <children>
+            <JFXPasswordField fx:id="pwdField" focusColor="#233de7" layoutX="218.0" layoutY="271.0" prefHeight="25.0" prefWidth="242.0" promptText="Password" unFocusColor="#1170d6" />
+            <JFXTextField fx:id="txtUser" focusColor="#233de7" layoutX="218.0" layoutY="200.0" prefHeight="25.0" prefWidth="242.0" promptText="User name" unFocusColor="#1170d6" />
+            <Text layoutX="112.0" layoutY="219.0" strokeType="OUTSIDE" strokeWidth="0.0" text="User name" />
+            <Text layoutX="119.0" layoutY="282.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Password" />
+            <JFXButton buttonType="RAISED" layoutX="279.0" layoutY="358.0" onAction="#openDashBoardForm" prefHeight="32.0" prefWidth="108.0" style="-fx-background-color: blue; -fx-background-radius: 20; -fx-border-color: white; -fx-border-radius: 20;" text="Log In" textFill="#f8efef" />
+            <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="233.0" layoutY="20.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../assets/images.png" />
+               </image>
+            </ImageView>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

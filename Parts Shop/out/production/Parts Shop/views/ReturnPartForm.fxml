@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="returnFormContext" prefHeight="539.0" prefWidth="936.0" style="-fx-background-color: #43609C;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ReturnPartFormController">
+   <children>
+      <VBox prefHeight="539.0" prefWidth="243.0" style="-fx-background-color: #A4A4A4;">
+         <children>
+            <VBox prefHeight="88.0" prefWidth="243.0" style="-fx-background-color: #43609C;">
+               <children>
+                  <Pane prefHeight="86.0" prefWidth="243.0">
+                     <children>
+                        <Label layoutX="52.0" layoutY="5.0" prefHeight="29.0" prefWidth="124.0" text="AVC" textFill="#f2eeee">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                        </Label>
+                        <Separator layoutX="52.0" layoutY="33.0" prefHeight="5.0" prefWidth="124.0" />
+                     </children>
+                  </Pane>
+               </children>
+            </VBox>
+            <Pane prefHeight="278.0" prefWidth="243.0" style="-fx-background-color: #43609C;">
+               <children>
+                  <Label fx:id="lblTime" alignment="TOP_CENTER" layoutX="37.0" layoutY="25.0" prefHeight="40.0" prefWidth="159.0" text="Time" textFill="#f2eeee">
+                     <font>
+                        <Font name="System Bold" size="28.0" />
+                     </font>
+                  </Label>
+                  <Separator layoutX="37.0" layoutY="72.0" prefHeight="5.0" prefWidth="194.0" />
+                  <Label fx:id="lblDate" alignment="TOP_CENTER" layoutX="42.0" layoutY="99.0" prefHeight="40.0" prefWidth="159.0" text="Date" textFill="#f2eeee">
+                     <font>
+                        <Font name="System Bold" size="28.0" />
+                     </font>
+                  </Label>
+                  <JFXButton buttonType="RAISED" layoutX="2.0" layoutY="186.0" onAction="#backToHome" prefHeight="40.0" prefWidth="243.0" style="-fx-background-radius: 20; -fx-border-color: white; -fx-border-radius: 20;" text="Back" textFill="#fff9f9" />
+               </children>
+            </Pane>
+            <Pane prefHeight="186.0" prefWidth="243.0">
+               <children>
+                  <ImageView fitHeight="96.0" fitWidth="128.0" layoutX="67.0" layoutY="6.0" onMouseEntered="#playMouseEnterAnimation" onMouseExited="#playMouseExitAnimation" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../assets/printer_14721.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </Pane>
+         </children>
+      </VBox>
+      <AnchorPane layoutX="243.0" layoutY="88.0" prefHeight="451.0" prefWidth="774.0" style="-fx-background-color: #A4A4A4;">
+         <children>
+            <JFXButton buttonType="RAISED" layoutX="77.0" layoutY="399.0" onAction="#saveReturnPartOnAction" prefHeight="32.0" prefWidth="108.0" style="-fx-background-radius: 50000; -fx-background-color: #1565c0; -fx-border-color: #e3f2fd; -fx-border-radius: 50000;" text="Save Return Part" textFill="#f8f5f5">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </JFXButton>
+            <JFXButton buttonType="RAISED" layoutX="440.0" layoutY="399.0" onAction="#updateReturnPartOnAction" prefHeight="32.0" prefWidth="124.0" style="-fx-background-radius: 50000; -fx-background-color: #757575; -fx-border-color: #f5f5f5; -fx-border-radius: 50000;" text="Update Return part" textFill="#f5f0f0">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </JFXButton>
+            <JFXButton buttonType="RAISED" layoutX="596.0" layoutY="399.0" onAction="#removeReturnPartOnAction" prefHeight="32.0" prefWidth="124.0" style="-fx-background-radius: 50000; -fx-background-color: #d50000; -fx-border-color: #ffebee; -fx-border-radius: 50000;" text="Remove Return Part" textFill="#f2ecec">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </JFXButton>
+            <JFXTextField fx:id="txtReturnId" focusColor="WHITE" layoutX="27.0" layoutY="38.0" onAction="#searchOnAction" promptText="Return ID" unFocusColor="WHITE">
+               <font>
+                  <Font name="Arial Black" size="12.0" />
+               </font></JFXTextField>
+            <JFXTextField fx:id="txtReturnDate" focusColor="WHITE" layoutX="189.0" layoutY="38.0" promptText="Return Date" unFocusColor="WHITE">
+               <font>
+                  <Font name="Arial Black" size="12.0" />
+               </font></JFXTextField>
+            <JFXTextField fx:id="txtPartCode" focusColor="WHITE" layoutX="363.0" layoutY="38.0" promptText="Part Code" unFocusColor="WHITE" />
+            <JFXTextField fx:id="txtWarrentyCard" focusColor="WHITE" layoutX="556.0" layoutY="38.0" promptText="Warrenty Card" unFocusColor="WHITE" />
+            <TableView fx:id="tblReturn" layoutX="11.0" layoutY="118.0" prefHeight="269.0" prefWidth="755.0">
+              <columns>
+                <TableColumn fx:id="colId" prefWidth="160.0" text="Return ID" />
+                <TableColumn fx:id="colDate" prefWidth="207.0" text="Date" />
+                  <TableColumn fx:id="colPartCode" prefWidth="178.0" text="Part Code" />
+                  <TableColumn fx:id="colWarrenty" prefWidth="209.0" text="Warrenty Card" />
+              </columns>
+            </TableView>
+         </children></AnchorPane>
+      <Pane layoutX="244.0" layoutY="-2.0" prefHeight="88.0" prefWidth="508.0">
+         <children>
+            <Label layoutX="116.0" layoutY="30.0" prefHeight="28.0" prefWidth="152.0" text="Return Parts" textFill="#eee5e5">
+               <font>
+                  <Font name="Berlin Sans FB Demi Bold" size="20.0" />
+               </font></Label>
+         </children>
+      </Pane>
+      <JFXTextField fx:id="txtSearch" focusColor="WHITE" layoutX="796.0" layoutY="36.0" promptText="Search" unFocusColor="WHITE" />
+      <ImageView fitHeight="56.0" fitWidth="67.0" layoutX="947.0" layoutY="18.0" onMouseEntered="#playMouseEnterAnimation" onMouseExited="#playMouseExitAnimation" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../assets/search_14765.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>

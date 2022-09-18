@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="employeeFormContext" prefHeight="533.0" prefWidth="1005.0" style="-fx-background-color: #43609C;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.EmployeeFormController">
+   <children>
+      <VBox prefHeight="533.0" prefWidth="243.0" style="-fx-background-color: #A4A4A4;">
+         <children>
+            <VBox prefHeight="88.0" prefWidth="243.0" style="-fx-background-color: #43609C;">
+               <children>
+                  <Pane prefHeight="85.0" prefWidth="243.0">
+                     <children>
+                        <Label layoutX="52.0" layoutY="5.0" prefHeight="29.0" prefWidth="124.0" text="AVC" />
+                        <Separator layoutX="52.0" layoutY="33.0" prefHeight="5.0" prefWidth="124.0" />
+                     </children>
+                  </Pane>
+               </children>
+            </VBox>
+            <Pane prefHeight="295.0" prefWidth="243.0" style="-fx-background-color: #43609C;">
+               <children>
+                  <JFXButton buttonType="RAISED" layoutY="238.0" onAction="#backToHome" prefHeight="48.0" prefWidth="243.0" style="-fx-background-radius: 50000; -fx-background-color: #A4A4A4;" text="Back" textFill="WHITE" />
+                  <JFXButton buttonType="RAISED" layoutX="1.0" layoutY="6.0" onAction="#openViewEmpForm" prefHeight="48.0" prefWidth="243.0" style="-fx-background-radius: 50000; -fx-background-color: #A4A4A4;" text="View Employee Detail" textFill="WHITE" />
+               </children>
+            </Pane>
+            <Pane prefHeight="155.0" prefWidth="243.0">
+               <children>
+                  <ImageView fitHeight="81.0" fitWidth="85.0" layoutX="82.0" layoutY="4.0" onMouseEntered="#playMouseEnterAnimation" onMouseExited="#playMouseExitAnimation" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../assets/printer_14721.png" />
+                     </image>
+                  </ImageView>
+                  <Label layoutX="34.0" layoutY="111.0" text="Print your All the Employee detail" />
+               </children>
+            </Pane>
+         </children>
+      </VBox>
+      <AnchorPane layoutX="243.0" layoutY="88.0" prefHeight="445.0" prefWidth="774.0" style="-fx-background-color: #A4A4A4;">
+         <children>
+            <Pane layoutX="32.0" layoutY="-90.0" prefHeight="88.0" prefWidth="508.0">
+               <children>
+                  <Label layoutX="116.0" layoutY="30.0" prefHeight="28.0" prefWidth="152.0" text="Employee" textFill="#fcf7f7">
+                     <font>
+                        <Font name="Agency FB Bold" size="20.0" />
+                     </font></Label>
+                  <Label fx:id="lblDate" alignment="CENTER" layoutX="302.0" layoutY="31.0" prefHeight="30.0" prefWidth="152.0" text="Date" textFill="#f8f5f5">
+                     <font>
+                        <Font name="System Bold" size="20.0" />
+                     </font>
+                  </Label>
+               </children>
+            </Pane>
+            <ImageView fitHeight="88.0" fitWidth="48.0" layoutX="164.0" layoutY="42.0" onMouseEntered="#playMouseEnterAnimation" onMouseExited="#playMouseExitAnimation" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../assets/person_user_customer_man_male_man_boy_people_1688.png" />
+               </image>
+            </ImageView>
+            <JFXTextField fx:id="txtEmpId" focusColor="WHITE" labelFloat="true" layoutX="30.0" layoutY="125.0" onKeyReleased="#textFields_Key_Released" promptText="Employee ID" unFocusColor="WHITE">
+               <font>
+                  <Font name="Arial Black" size="12.0" />
+               </font></JFXTextField>
+            <JFXTextField fx:id="txtEmpAddress" focusColor="WHITE" labelFloat="true" layoutX="212.0" layoutY="125.0" onKeyReleased="#textFields_Key_Released" promptText="Address" unFocusColor="WHITE" />
+            <JFXTextField fx:id="txtEmpName" focusColor="WHITE" labelFloat="true" layoutX="30.0" layoutY="190.0" onKeyReleased="#textFields_Key_Released" prefHeight="25.0" prefWidth="326.0" promptText="Name" unFocusColor="WHITE" />
+            <JFXTextField fx:id="txtEmpSalary" focusColor="WHITE" labelFloat="true" layoutX="30.0" layoutY="255.0" onKeyReleased="#textFields_Key_Released" prefHeight="25.0" prefWidth="152.0" promptText="Basic Salary" unFocusColor="WHITE" />
+            <JFXTextField fx:id="txtEmpTele" focusColor="WHITE" labelFloat="true" layoutX="212.0" layoutY="256.0" onKeyReleased="#textFields_Key_Released" prefHeight="25.0" prefWidth="152.0" promptText="Tele No" unFocusColor="WHITE" />
+            <JFXButton fx:id="btnSave" buttonType="RAISED" layoutX="110.0" layoutY="383.0" onAction="#saveEmployeeOnAction" prefHeight="32.0" prefWidth="165.0" style="-fx-background-radius: 50000; -fx-background-color: #34495e; -fx-border-color: #ecf0f1; -fx-border-radius: 50000;" text="Save Employee" textFill="#eee7e7">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </JFXButton>
+            <JFXButton fx:id="btnUpdate" buttonType="RAISED" layoutX="429.0" layoutY="399.0" onAction="#updateEmployeeOnAction" prefHeight="32.0" prefWidth="135.0" style="-fx-background-radius: 50000; -fx-background-color: #2c3e50; -fx-border-color: #ecf0f1; -fx-border-radius: 50000;" text="Update Employee" textFill="#f5f0f0">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </JFXButton>
+            <JFXButton fx:id="btnRemove" buttonType="RAISED" layoutX="596.0" layoutY="399.0" onAction="#removeEmployeeOnAction" prefHeight="32.0" prefWidth="135.0" style="-fx-background-radius: 50000; -fx-background-color: #e74c3c; -fx-border-color: #ecf0f1; -fx-border-radius: 50000;" text="Remove Employee" textFill="#f5f0f0">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </JFXButton>
+            <Label id="t1" layoutX="428.0" layoutY="308.0" stylesheets="@../../../../../Downloads/Parts%20Shop/partShop/src/assert/css/colour.css" text="If you click the remove employee button,&#10; all the data of the relevant employee &#10;will be lost !!!&#10;and Click Update button &#10;You can save new data !" textAlignment="CENTER" />
+            <Label id="treat" layoutX="521.0" layoutY="285.0" stylesheets="@../../../../../Downloads/Parts%20Shop/partShop/src/assert/css/colour.css" text="Please Treat !" />
+         </children>
+      </AnchorPane>
+      <JFXTextField fx:id="txtSearch" focusColor="WHITE" labelFloat="true" layoutX="796.0" layoutY="36.0" onAction="#searchEmployeeOnAction" promptText="Search" unFocusColor="WHITE" />
+      <ImageView fitHeight="56.0" fitWidth="67.0" layoutX="937.0" layoutY="18.0" onMouseEntered="#playMouseEnterAnimation" onMouseExited="#playMouseExitAnimation" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../assets/search_14765.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>

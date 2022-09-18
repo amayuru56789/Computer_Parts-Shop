@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="DashBoardFormContext" prefHeight="712.0" prefWidth="1366.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.DashBoardFormController">
+   <children>
+      <ImageView fx:id="order" fitHeight="153.0" fitWidth="153.0" layoutX="272.0" layoutY="310.0" onMouseClicked="#openOrderForm" onMouseEntered="#playMouseEnterAnimation" onMouseExited="#playMouseExiteAnimation" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../assets/shopping_cart_14766.png" />
+         </image>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </ImageView>
+      <ImageView fx:id="customer" fitHeight="153.0" fitWidth="153.0" layoutX="283.0" layoutY="60.0" onMouseClicked="#openCustomerForm" onMouseEntered="#playMouseEnterAnimation" onMouseExited="#playMouseExiteAnimation" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../assets/business_application_addmale_useradd_insert_add_user_client_2312.png" />
+         </image>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </ImageView>
+      <ImageView fx:id="orderDetail" fitHeight="153.0" fitWidth="153.0" layoutX="607.0" layoutY="310.0" onMouseClicked="#openOrderDetailForm" onMouseEntered="#playMouseEnterAnimation" onMouseExited="#playMouseExiteAnimation" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../assets/waiting_14710.png" />
+         </image>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </ImageView>
+      <ImageView fx:id="employee" fitHeight="153.0" fitWidth="153.0" layoutX="942.0" layoutY="60.0" onMouseClicked="#openEmployeeForm" onMouseEntered="#playMouseEnterAnimation" onMouseExited="#playMouseExiteAnimation" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../assets/person_user_customer_man_male_man_boy_people_1688.png" />
+         </image>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </ImageView>
+      <ImageView fx:id="Return" fitHeight="153.0" fitWidth="153.0" layoutX="942.0" layoutY="310.0" onMouseClicked="#openReturnForm" onMouseEntered="#playMouseEnterAnimation" onMouseExited="#playMouseExiteAnimation" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../assets/configuration_1_14712.png" />
+         </image>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </ImageView>
+      <ImageView fx:id="admin" fitHeight="153.0" fitWidth="153.0" layoutX="606.0" layoutY="77.0" onMouseClicked="#openAdminForm" onMouseEntered="#playMouseEnterAnimation" onMouseExited="#playMouseExiteAnimation" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../assets/mobile_14722.png" />
+         </image>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </ImageView>
+      <Line endX="461.0" endY="7.0" layoutX="574.0" layoutY="490.0" opacity="0.4" startX="-236.0" startY="7.0" stroke="WHITE" />
+      <Label fx:id="lblMenu" alignment="CENTER" layoutX="373.0" layoutY="542.0" prefHeight="58.0" prefWidth="619.0" text="WELCOME" textAlignment="CENTER" textFill="#03a48c">
+         <font>
+            <Font name="Rockwell Extra Bold" size="47.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblDesc" alignment="CENTER" layoutX="343.0" layoutY="596.0" prefHeight="25.0" prefWidth="684.0" text="\@2021 Amayuru Indeewara">
+         <font>
+            <Font name="Bookman Old Style" size="21.0" />
+         </font>
+      </Label>
+      <JFXButton buttonType="RAISED" layoutX="615.0" layoutY="644.0" onAction="#openSignUpForm" prefHeight="44.0" prefWidth="153.0" style="-fx-background-color: #2E2E2E; -fx-background-radius: 50; -fx-border-color: white; -fx-border-radius: 50;" text="Sign Up" textFill="WHITE">
+         <font>
+            <Font name="Bell MT" size="14.0" />
+         </font>
+      </JFXButton>
+   </children>
+</AnchorPane>

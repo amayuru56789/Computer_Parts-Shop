@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXPasswordField?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="421.0" prefWidth="648.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.SignUpFormController">
+   <children>
+      <Pane layoutX="394.0" layoutY="-2.0" prefHeight="427.0" prefWidth="259.0">
+         <children>
+            <JFXTextField fx:id="txtMail" focusColor="#38d8e1" labelFloat="true" layoutX="34.0" layoutY="141.0" prefHeight="25.0" prefWidth="191.0" promptText="Email" unFocusColor="#9a9797" />
+            <JFXTextField fx:id="txtContact" focusColor="#38d8e1" labelFloat="true" layoutX="32.0" layoutY="198.0" prefHeight="25.0" prefWidth="191.0" promptText="Contact No" unFocusColor="#9a9797" />
+            <JFXButton buttonType="RAISED" layoutX="71.0" layoutY="375.0" onAction="#saveAdminOnAction" prefHeight="32.0" prefWidth="117.0" style="-fx-background-color: white; -fx-background-radius: 50; -fx-border-color: #3ac0dd; -fx-border-radius: 50;" text="Sign In" textFill="#3ac0dd">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </JFXButton>
+            <JFXTextField fx:id="txtUser" focusColor="#38d8e1" labelFloat="true" layoutX="34.0" layoutY="86.0" prefHeight="25.0" prefWidth="191.0" promptText="User name" unFocusColor="#9a9797" />
+            <JFXPasswordField fx:id="txtPassword" focusColor="#38d8e1" labelFloat="true" layoutX="33.0" layoutY="259.0" prefHeight="25.0" prefWidth="191.0" promptText="Paasword" unFocusColor="#9a9797" />
+            <JFXPasswordField fx:id="txtConPassword" focusColor="#38d8e1" labelFloat="true" layoutX="34.0" layoutY="317.0" prefHeight="25.0" prefWidth="191.0" promptText="Conform Paasword" unFocusColor="#9a9797" />
+            <Text layoutX="34.0" layoutY="54.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Sgin Up">
+               <font>
+                  <Font name="System Bold" size="29.0" />
+               </font>
+               <fill>
+                  <LinearGradient endX="1.0" endY="0.13809523809523805" startX="1.0">
+                     <stops>
+                        <Stop color="#656363" />
+                        <Stop color="#686464" offset="1.0" />
+                     </stops>
+                  </LinearGradient>
+               </fill>
+            </Text>
+         </children>
+      </Pane>
+      <ImageView fitHeight="404.0" fitWidth="387.0" layoutX="6.0" layoutY="60.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../assets/istockphoto-613538064-170667a.jpg" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>

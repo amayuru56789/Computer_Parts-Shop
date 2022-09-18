@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXPasswordField?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="LoginFormContext" prefHeight="179.0" prefWidth="672.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.LoginFormController">
+   <children>
+      <ImageView fitHeight="480.0" fitWidth="819.0" layoutX="-55.0" layoutY="-17.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../assets/4893706.jpg" />
+         </image>
+      </ImageView>
+      <AnchorPane layoutX="150.0" layoutY="69.0" prefHeight="312.0" prefWidth="483.0" style="-fx-background-color: #212121;">
+         <children>
+            <Label layoutX="180.0" layoutY="4.0" text="Login" textFill="#eee5e5">
+               <font>
+                  <Font name="Tahoma Bold" size="36.0" />
+               </font>
+            </Label>
+            <AnchorPane layoutX="184.0" layoutY="50.0" prefHeight="4.0" prefWidth="92.0" style="-fx-background-color: #76ff03;" />
+            <JFXTextField fx:id="txtUnamebox" focusColor="#0aee06" labelFloat="true" layoutX="148.0" layoutY="79.0" prefHeight="25.0" prefWidth="167.0" promptText="Username" />
+            <JFXPasswordField fx:id="txtPnamebox" focusColor="#0aee06" labelFloat="true" layoutX="149.0" layoutY="133.0" prefHeight="25.0" prefWidth="167.0" promptText="Password" />
+            <JFXButton buttonType="RAISED" layoutX="150.0" layoutY="203.0" onAction="#openDashBoardForm" prefHeight="34.0" prefWidth="167.0" style="-fx-background-color: #76ff03; -fx-background-radius: 90;" text="Login" textFill="#f8f3f3">
+               <font>
+                  <Font name="Tahoma Bold" size="14.0" />
+               </font>
+            </JFXButton>
+            <ImageView fitHeight="34.0" fitWidth="29.0" layoutX="112.0" layoutY="132.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../assets/padlock.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="34.0" fitWidth="29.0" layoutX="112.0" layoutY="79.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../assets/avatar.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

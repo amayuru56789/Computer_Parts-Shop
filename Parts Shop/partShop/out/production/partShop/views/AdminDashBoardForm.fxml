@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="dashBoardFormContext" prefHeight="712.0" prefWidth="1366.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.AdminDashBoardFormController">
+   <children>
+      <ImageView fx:id="supplier" fitHeight="144.0" fitWidth="146.0" layoutX="822.0" layoutY="268.0" onMouseClicked="#openSupplierForm" onMouseEntered="#playMouseEnterAnimation" onMouseExited="#playMouseExiteAnimation" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../assets/6563309_preview.jpg" />
+         </image>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </ImageView>
+      <ImageView fx:id="item" fitHeight="144.0" fitWidth="144.0" layoutX="325.0" layoutY="265.0" onMouseClicked="#openPartForm" onMouseEntered="#playMouseEnterAnimation" onMouseExited="#playMouseExiteAnimation" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../assets/add-item-icon-8.jpg" />
+         </image>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </ImageView>
+      <Label fx:id="lblMenu" alignment="CENTER" layoutX="442.0" layoutY="569.0" prefHeight="58.0" prefWidth="495.0" text="WELCOME" textAlignment="CENTER" textFill="#03a48c">
+         <font>
+            <Font name="Rockwell Extra Bold" size="47.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblDesc" alignment="CENTER" layoutX="368.0" layoutY="627.0" prefHeight="25.0" prefWidth="652.0" text="\@2021 Amayuru Indeewara">
+         <font>
+            <Font name="Bookman Old Style" size="21.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>
